@@ -21,9 +21,13 @@
 		<EditText
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
+            android:windowSoftInputMode="stateHidden"
 			android:hint="Expression"
 			android:id="@+id/Display"
-            />
+            android:textSize="30px"
+            android:inputType="none"
+            android:textIsSelectable="true"
+        />
 	</android.support.design.widget.TextInputLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -33,16 +37,40 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1"
         android:layout_marginBottom="4.0dp"
-		android:layout_marginLeft="4.0dp"
-		android:layout_marginRight="4.0dp"
-        android:layout_alignParentBottom="true" >
+        android:layout_marginLeft="4.0dp"
+        android:layout_marginRight="4.0dp"
+        android:layout_alignParentBottom="true">
         <LinearLayout
             android:orientation="horizontal"
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout9" >
+            android:id="@+id/linearLayout9">
+            <Button
+                android:text="&#9668;"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:textSize="25sp"
+                android:id="@+id/CursorLeft"
+            />
+            <Button
+                android:text="&#9658;"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:textSize="25sp"
+                android:id="@+id/CursorRight"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout9">
             <Button
                 android:text="2^x"
                 android:layout_width="wrap_content"
@@ -78,7 +106,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout8" >
+            android:id="@+id/linearLayout8">
             <Button
                 android:text="Ln"
                 android:layout_width="wrap_content"
@@ -114,7 +142,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout7" >
+            android:id="@+id/linearLayout7">
             <Button
                 android:text="Sin"
                 android:layout_width="wrap_content"
@@ -150,7 +178,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout6" >
+            android:id="@+id/linearLayout6">
             <Button
                 android:text="Pi"
                 android:layout_width="wrap_content"
@@ -186,7 +214,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout5" >
+            android:id="@+id/linearLayout5">
             <Button
                 android:text="C"
                 android:layout_width="wrap_content"
@@ -222,7 +250,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout4" >
+            android:id="@+id/linearLayout4">
             <Button
                 android:text="7"
                 android:layout_width="wrap_content"
@@ -258,7 +286,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout3" >
+            android:id="@+id/linearLayout3">
             <Button
                 android:text="4"
                 android:layout_width="wrap_content"
@@ -294,7 +322,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout2" >
+            android:id="@+id/linearLayout2">
             <Button
                 android:text="1"
                 android:layout_width="wrap_content"
@@ -330,7 +358,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout1" >
+            android:id="@+id/linearLayout1">
             <Button
                 android:text="0"
                 android:layout_width="wrap_content"

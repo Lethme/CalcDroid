@@ -33,3 +33,12 @@ E:\Projects\Visual Studio\Xamarin\Calculator\Expression\obj\Debug\Expression.csp
 E:\Projects\Visual Studio\Xamarin\Calculator\Expression\obj\Debug\Expression.csproj.CopyComplete
 E:\Projects\Visual Studio\Xamarin\Calculator\Expression\obj\Debug\Expression.dll
 E:\Projects\Visual Studio\Xamarin\Calculator\Expression\obj\Debug\Expression.pdb
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Expression\bin\Debug\bin\Expression.dll
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Expression\bin\Debug\bin\Expression.pdb
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Expression\bin\Debug\bin\Collections.dll
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Expression\bin\Debug\bin\Collections.pdb
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Expression\obj\Debug\Expression.csprojAssemblyReference.cache
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Expression\obj\Debug\Expression.csproj.CoreCompileInputs.cache
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Expression\obj\Debug\Expression.csproj.CopyComplete
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Expression\obj\Debug\Expression.dll
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Expression\obj\Debug\Expression.pdb

@@ -9,6 +9,9 @@ using Android.Support.Design.Widget;
 using Android.Views;
 using System;
 using Android.Content.PM;
+using Android.Views.InputMethods;
+using Android.Content;
+using Android.Text;
 
 namespace Calculator
 {
@@ -27,11 +30,13 @@ namespace Calculator
 
             Display = (TextInputLayout)FindViewById(Resource.Id.textInputLayout);
             Text = (EditText)FindViewById(Resource.Id.Display);
+            /*
+            Text.Clickable = false;
             Text.Focusable = false;
             Text.FocusableInTouchMode = false;
-            Text.Clickable = false;
             Text.LongClickable = false;
             Text.SetCursorVisible(false);
+            */
 
             FindViewById<Button>(Resource.Id.Equal).Click += delegate
             {
@@ -66,17 +71,17 @@ namespace Calculator
             FindViewById<Button>(Resource.Id.Backspace).Click += delegate { Backspace(); };
             FindViewById<Button>(Resource.Id.Clear).Click += delegate { Clear(); };
 
-            FindViewById<Button>(Resource.Id.Sin).Click += delegate { AddText("Sin("); };
-            FindViewById<Button>(Resource.Id.Cos).Click += delegate { AddText("Cos("); };
-            FindViewById<Button>(Resource.Id.Tan).Click += delegate { AddText("Tan("); };
-            FindViewById<Button>(Resource.Id.Ctg).Click += delegate { AddText("Ctg("); };
-            FindViewById<Button>(Resource.Id.Ln).Click += delegate { AddText("Ln("); };
-            FindViewById<Button>(Resource.Id.Lg).Click += delegate { AddText("Lg("); };
-            FindViewById<Button>(Resource.Id.Log).Click += delegate { AddText("Log("); };
-            FindViewById<Button>(Resource.Id.Pow2).Click += delegate { AddText("Pow2("); };
-            FindViewById<Button>(Resource.Id.Pow10).Click += delegate { AddText("Pow10("); };
-            FindViewById<Button>(Resource.Id.Abs).Click += delegate { AddText("Abs("); };
-            FindViewById<Button>(Resource.Id.Round).Click += delegate { AddText("Round("); };
+            FindViewById<Button>(Resource.Id.Sin).Click += delegate { AddText("Sin()", 4); };
+            FindViewById<Button>(Resource.Id.Cos).Click += delegate { AddText("Cos()", 4); };
+            FindViewById<Button>(Resource.Id.Tan).Click += delegate { AddText("Tan()", 4); };
+            FindViewById<Button>(Resource.Id.Ctg).Click += delegate { AddText("Ctg()", 4); };
+            FindViewById<Button>(Resource.Id.Ln).Click += delegate { AddText("Ln()", 3); };
+            FindViewById<Button>(Resource.Id.Lg).Click += delegate { AddText("Lg()", 3); };
+            FindViewById<Button>(Resource.Id.Log).Click += delegate { AddText("Log()", 4); };
+            FindViewById<Button>(Resource.Id.Pow2).Click += delegate { AddText("Pow2()", 5); };
+            FindViewById<Button>(Resource.Id.Pow10).Click += delegate { AddText("Pow10()", 6); };
+            FindViewById<Button>(Resource.Id.Abs).Click += delegate { AddText("Abs()", 4); };
+            FindViewById<Button>(Resource.Id.Round).Click += delegate { AddText("Round()", 6); };
 
             FindViewById<Button>(Resource.Id.LeftBracket).Click += delegate { AddText("("); };
             FindViewById<Button>(Resource.Id.RightBracket).Click += delegate { AddText(")"); };
@@ -84,10 +89,19 @@ namespace Calculator
             FindViewById<Button>(Resource.Id.Pi).Click += delegate { AddText("Pi"); };
             FindViewById<Button>(Resource.Id.E).Click += delegate { AddText("E"); };
             FindViewById<Button>(Resource.Id.Ans).Click += delegate { AddText("Ans"); };
+
+            FindViewById<Button>(Resource.Id.CursorLeft).Click += delegate { CursorLeft(); };
+            FindViewById<Button>(Resource.Id.CursorRight).Click += delegate { CursorRight(); };
         }
-        public void AddText(string str)
+        public void AddText(string Str, int CursorPosition = 0)
         {
-            Display.EditText.Text += str;
+            Display.EditText.RequestFocus();
+            var TempCursorPosition = Display.EditText.SelectionStart;
+            Display.EditText.Text = Display.EditText.Text.Insert(Display.EditText.SelectionStart, Str);
+            if (CursorPosition == 0)
+                Display.EditText.SetSelection(TempCursorPosition + Str.Length);
+            else
+                Display.EditText.SetSelection(TempCursorPosition + CursorPosition);
         }
         public void SetText(string str)
         {
@@ -103,6 +117,16 @@ namespace Calculator
             {
                 Display.EditText.Text = Display.EditText.Text.Remove(Display.EditText.Text.Length - 1, 1);
             }
+        }
+        public void CursorRight()
+        {
+            if (Display.EditText.SelectionStart < Display.EditText.Text.Length)
+                Display.EditText.SetSelection(Display.EditText.SelectionStart + 1);
+        }
+        public void CursorLeft()
+        {
+            if (Display.EditText.SelectionStart > 0)
+                Display.EditText.SetSelection(Display.EditText.SelectionStart - 1);
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

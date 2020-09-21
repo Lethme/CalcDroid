@@ -1522,11 +1522,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\Visual Studio\\Xamarin\\Calculator\\Calculator\\Calculator.csproj",
+      "projectUniqueName": "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Calculator\\Calculator.csproj",
       "projectName": "Calculator",
-      "projectPath": "E:\\Projects\\Visual Studio\\Xamarin\\Calculator\\Calculator\\Calculator.csproj",
+      "projectPath": "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Calculator\\Calculator.csproj",
       "packagesPath": "C:\\Users\\Saya\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\Visual Studio\\Xamarin\\Calculator\\Calculator\\obj\\",
+      "outputPath": "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Calculator\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1547,8 +1547,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "E:\\Projects\\Visual Studio\\Xamarin\\Calculator\\Expression\\Expression.csproj": {
-              "projectPath": "E:\\Projects\\Visual Studio\\Xamarin\\Calculator\\Expression\\Expression.csproj"
+            "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Expression\\Expression.csproj": {
+              "projectPath": "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Expression\\Expression.csproj"
             }
           }
         }
