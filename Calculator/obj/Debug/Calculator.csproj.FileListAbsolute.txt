@@ -1,0 +1,15 @@
+E:\Projects\Visual Studio\C#\Calculator\Calculator\bin\Debug\Calculator.exe.config
+E:\Projects\Visual Studio\C#\Calculator\Calculator\bin\Debug\Calculator.exe
+E:\Projects\Visual Studio\C#\Calculator\Calculator\bin\Debug\Calculator.pdb
+E:\Projects\Visual Studio\C#\Calculator\Calculator\bin\Debug\Expression.dll
+E:\Projects\Visual Studio\C#\Calculator\Calculator\bin\Debug\Collections.dll
+E:\Projects\Visual Studio\C#\Calculator\Calculator\bin\Debug\Expression.pdb
+E:\Projects\Visual Studio\C#\Calculator\Calculator\bin\Debug\Collections.pdb
+E:\Projects\Visual Studio\C#\Calculator\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+E:\Projects\Visual Studio\C#\Calculator\Calculator\obj\Debug\Calculator.Form1.resources
+E:\Projects\Visual Studio\C#\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+E:\Projects\Visual Studio\C#\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+E:\Projects\Visual Studio\C#\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+E:\Projects\Visual Studio\C#\Calculator\Calculator\obj\Debug\Calculator.csproj.CopyComplete
+E:\Projects\Visual Studio\C#\Calculator\Calculator\obj\Debug\Calculator.exe
+E:\Projects\Visual Studio\C#\Calculator\Calculator\obj\Debug\Calculator.pdb
