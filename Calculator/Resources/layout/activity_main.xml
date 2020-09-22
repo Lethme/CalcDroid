@@ -377,7 +377,7 @@
                 android:text="0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".5"
+                android:layout_weight=".25"
                 android:id="@+id/Num0"
             />
             <Button
@@ -393,6 +393,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
                 android:id="@+id/Equal"
+            />
+            <Button
+                android:text="%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:id="@+id/Mod"
             />
         </LinearLayout>
     </LinearLayout>

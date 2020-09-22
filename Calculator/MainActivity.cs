@@ -58,6 +58,7 @@ namespace Calculator
             FindViewById<Button>(Resource.Id.Mul).Click += delegate { AddText("*"); };
             FindViewById<Button>(Resource.Id.Div).Click += delegate { AddText("/"); };
             FindViewById<Button>(Resource.Id.Pow).Click += delegate { AddText("^"); };
+            FindViewById<Button>(Resource.Id.Mod).Click += delegate { AddText("%"); };
             FindViewById<Button>(Resource.Id.Comma).Click += delegate { AddText(","); };
             
             FindViewById<Button>(Resource.Id.Backspace).Click += delegate { Backspace(); };
@@ -144,6 +145,7 @@ namespace Calculator
             {
                 SetText("NaN");
             }
+            Display.EditText.SetSelection(GetExpression().Length);
             IsEqualPressed = true;
         }
         public string GetExpression()

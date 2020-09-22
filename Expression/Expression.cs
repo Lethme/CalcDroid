@@ -50,29 +50,29 @@ namespace Expression
         }
         static private class Service
         {
-            static public bool IsDelimeter(char c)
+            static public bool IsDelimeter(char Operator)
             {
-                if (Enum.IsDefined(typeof(Enums.Delimeters), (int)c)) return true;
+                if (Enum.IsDefined(typeof(Enums.Delimeters), (int)Operator)) return true;
                 return false;
             }
-            static public bool IsBinaryOperator(char c)
+            static public bool IsBinaryOperator(char Operator)
             {
-                if (Enum.IsDefined(typeof(Enums.BinaryOperators), (int)c)) return true;
+                if (Enum.IsDefined(typeof(Enums.BinaryOperators), (int)Operator)) return true;
                 return false;
             }
-            static public bool IsUnaryOperator(char c)
+            static public bool IsUnaryOperator(char Operator)
             {
-                if (Enum.IsDefined(typeof(Enums.UnaryOperators), (int)c)) return true;
+                if (Enum.IsDefined(typeof(Enums.UnaryOperators), (int)Operator)) return true;
                 return false;
             }
-            static public bool IsConstantOperator(char c)
+            static public bool IsConstantOperator(char Operator)
             {
-                if (Enum.IsDefined(typeof(Enums.ConstantOperators), (int)c)) return true;
+                if (Enum.IsDefined(typeof(Enums.ConstantOperators), (int)Operator)) return true;
                 return false;
             }
-            static public byte GetBinaryOperatorPriority(char s)
+            static public byte GetBinaryOperatorPriority(char Operator)
             {
-                switch (s)
+                switch (Operator)
                 {
                     case (char)Enums.BinaryOperators.LeftBracket: return 0;
                     case (char)Enums.BinaryOperators.RightBracket: return 1;
@@ -80,6 +80,7 @@ namespace Expression
                     case (char)Enums.BinaryOperators.Minus: return 3;
                     case (char)Enums.BinaryOperators.Mul: return 4;
                     case (char)Enums.BinaryOperators.Div: return 4;
+                    case (char)Enums.BinaryOperators.Mod: return 4;
                     case (char)Enums.BinaryOperators.Pow: return 5;
                     default: return 6;
                 }
