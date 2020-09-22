@@ -4606,7 +4606,7 @@ public final class R {
     public static final int Pow=0x7f080023;
     public static final int Pow10=0x7f080024;
     public static final int Pow2=0x7f080025;
-    public static final int Rad=0x7f080026;
+    public static final int RadDeg=0x7f080026;
     public static final int Round=0x7f080027;
     public static final int SHIFT=0x7f080028;
     public static final int SYM=0x7f080029;

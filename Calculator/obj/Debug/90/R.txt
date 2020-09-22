@@ -1007,7 +1007,7 @@ int id Plus 0x7f080022
 int id Pow 0x7f080023
 int id Pow10 0x7f080024
 int id Pow2 0x7f080025
-int id Rad 0x7f080026
+int id RadDeg 0x7f080026
 int id Round 0x7f080027
 int id SHIFT 0x7f080028
 int id SYM 0x7f080029

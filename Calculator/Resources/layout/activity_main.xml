@@ -198,7 +198,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
-                android:id="@+id/Rad"
+                android:id="@+id/RadDeg"
             />
             <Button
                 android:text="( )"

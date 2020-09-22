@@ -3682,7 +3682,7 @@ namespace Calculator
 			public const int progress_horizontal = 2131230880;
 			
 			// aapt resource value: 0x7F080026
-			public const int Rad = 2131230758;
+			public const int RadDeg = 2131230758;
 			
 			// aapt resource value: 0x7F0800A1
 			public const int radio = 2131230881;

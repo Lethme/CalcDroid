@@ -31,6 +31,7 @@ namespace Calculator
 
             Display = (TextInputLayout)FindViewById(Resource.Id.textInputLayout);
             Text = (EditText)FindViewById(Resource.Id.Display);
+            Text.RequestFocus();
             /*
             Text.Clickable = false;
             Text.Focusable = false;
@@ -39,18 +40,7 @@ namespace Calculator
             Text.SetCursorVisible(false);
             */
 
-            FindViewById<Button>(Resource.Id.Equal).Click += delegate
-            {
-                try
-                {
-                    SetText(Expression.Expression.Parse(Display.EditText.Text).ToString());
-                }
-                catch (Exception)
-                {
-                    SetText("NaN");
-                }
-                IsEqualPressed = true;
-            };
+            FindViewById<Button>(Resource.Id.Equal).Click += delegate { Result(GetExpression()); };
 
             FindViewById<Button>(Resource.Id.Num0).Click += delegate { AddText("0"); };
             FindViewById<Button>(Resource.Id.Num1).Click += delegate { AddText("1"); };
@@ -94,19 +84,12 @@ namespace Calculator
             FindViewById<Button>(Resource.Id.CursorLeft).Click += delegate { CursorLeft(); };
             FindViewById<Button>(Resource.Id.CursorRight).Click += delegate { CursorRight(); };
 
-            FindViewById<Button>(Resource.Id.Rad).Click += delegate
+            FindViewById<Button>(Resource.Id.RadDeg).Click += delegate
             {
-                var RadBtn = FindViewById<Button>(Resource.Id.Rad);
-                if (RadBtn.Text == "Rad")
-                {
-                    Expression.Expression.Deg = true;
-                    RadBtn.Text = "Deg";
-                }
-                else if (RadBtn.Text == "Deg")
-                {
-                    Expression.Expression.Deg = false;
-                    RadBtn.Text = "Rad";
-                }
+                var RadDegBtn = FindViewById<Button>(Resource.Id.RadDeg);
+                if (Expression.Expression.SwitchRadDeg()) { RadDegBtn.Text = "Deg"; }
+                else { RadDegBtn.Text = "Rad"; }
+                if (GetExpression() != String.Empty) Result(GetLastExpression());
             };
         }
         public void AddText(string Str, int CursorPosition = 0)
@@ -148,6 +131,26 @@ namespace Calculator
         {
             if (Display.EditText.SelectionStart > 0)
                 Display.EditText.SetSelection(Display.EditText.SelectionStart - 1);
+        }
+        public void Result(string Expr)
+        {
+            try
+            {
+                SetText(Expression.Expression.Parse(Expr).ToString());
+            }
+            catch (Exception)
+            {
+                SetText("NaN");
+            }
+            IsEqualPressed = true;
+        }
+        public string GetExpression()
+        {
+            return Display.EditText.Text;
+        }
+        public string GetLastExpression()
+        {
+            return Expression.Expression.LastExpression;
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

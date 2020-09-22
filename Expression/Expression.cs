@@ -86,8 +86,15 @@ namespace Expression
             }
         }
         static public double Ans { get; private set; } = Double.NaN;
-        static public bool Deg { get; set; } = false;
-        static public string GetRPNExpression(string Expression)
+        static public bool Deg { get; private set; } = false;
+        static public string LastExpression { get; private set; } = String.Empty;
+        static public bool SwitchRadDeg()
+        {
+            if (Deg) Deg = false;
+            else Deg = true;
+            return Deg;
+        }
+        static private string GetRPNExpression(string Expression)
         {
             string RPNExpression = string.Empty;
             Stack<char> OperatorStack = new Stack<char>();
@@ -185,7 +192,7 @@ namespace Expression
 
             return RPNExpression;
         }
-        static public double EvaluateRPN(string RPNExpression)
+        static private double EvaluateRPN(string RPNExpression)
         {
             double result = 0;
             Stack<double> Numbers = new Stack<double>();
@@ -275,6 +282,7 @@ namespace Expression
         {
             string RPNExpression = GetRPNExpression(Expression);
             double result = EvaluateRPN(RPNExpression);
+            LastExpression = Expression;
             Ans = result;
             return result;
         }
