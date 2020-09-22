@@ -15,9 +15,9 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
 		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-		android:layout_marginTop="4.0dp"
-		android:layout_marginLeft="4.0dp"
-		android:layout_marginRight="4.0dp">
+		android:layout_marginTop="7.0dp"
+		android:layout_marginLeft="7.0dp"
+		android:layout_marginRight="7.0dp">
 		<EditText
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -37,8 +37,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1"
         android:layout_marginBottom="4.0dp"
-        android:layout_marginLeft="4.0dp"
-        android:layout_marginRight="4.0dp"
+        android:layout_marginLeft="7.0dp"
+        android:layout_marginRight="7.0dp"
         android:layout_alignParentBottom="true">
         <LinearLayout
             android:orientation="horizontal"
@@ -48,10 +48,24 @@
             android:layout_height="wrap_content"
             android:id="@+id/linearLayout9">
             <Button
+                android:text="Sqrt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:id="@+id/Sqrt"
+            />
+            <Button
+                android:text="Sqr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:id="@+id/Sqr"
+            />
+            <Button
                 android:text="&#9668;"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".5"
+                android:layout_weight=".25"
                 android:textSize="25sp"
                 android:id="@+id/CursorLeft"
             />
@@ -59,7 +73,7 @@
                 android:text="&#9658;"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".5"
+                android:layout_weight=".25"
                 android:textSize="25sp"
                 android:id="@+id/CursorRight"
             />

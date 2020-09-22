@@ -74,6 +74,8 @@ namespace Calculator
             FindViewById<Button>(Resource.Id.Pow10).Click += delegate { AddText("Pow10()", 6); };
             FindViewById<Button>(Resource.Id.Abs).Click += delegate { AddText("Abs()", 4); };
             FindViewById<Button>(Resource.Id.Round).Click += delegate { AddText("Round()", 6); };
+            FindViewById<Button>(Resource.Id.Sqrt).Click += delegate { AddText("Sqrt()", 5); };
+            FindViewById<Button>(Resource.Id.Sqr).Click += delegate { AddText("Sqr()", 4); };
 
             FindViewById<Button>(Resource.Id.Brackets).Click += delegate { AddText("()", 1); };
 
