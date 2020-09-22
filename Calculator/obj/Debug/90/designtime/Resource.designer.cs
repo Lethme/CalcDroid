@@ -3294,11 +3294,11 @@ namespace Calculator
 			// aapt resource value: 0x7F080003
 			public const int Ans = 2131230723;
 			
-			// aapt resource value: 0x7F080001
-			public const int APPLICATION_NAME = 2131230721;
-			
 			// aapt resource value: 0x7F080044
 			public const int application_name = 2131230788;
+			
+			// aapt resource value: 0x7F080001
+			public const int APPLICATION_NAME = 2131230721;
 			
 			// aapt resource value: 0x7F080045
 			public const int async = 2131230789;
@@ -3320,6 +3320,9 @@ namespace Calculator
 			
 			// aapt resource value: 0x7F08004A
 			public const int bottom = 2131230794;
+			
+			// aapt resource value: 0x7F080005
+			public const int Brackets = 2131230725;
 			
 			// aapt resource value: 0x7F08004B
 			public const int browser_actions_header_text = 2131230795;
@@ -3363,8 +3366,8 @@ namespace Calculator
 			// aapt resource value: 0x7F080058
 			public const int chronometer = 2131230808;
 			
-			// aapt resource value: 0x7F080006
-			public const int Clear = 2131230726;
+			// aapt resource value: 0x7F080007
+			public const int Clear = 2131230727;
 			
 			// aapt resource value: 0x7F080059
 			public const int clip_horizontal = 2131230809;
@@ -3375,8 +3378,8 @@ namespace Calculator
 			// aapt resource value: 0x7F08005B
 			public const int collapseActionView = 2131230811;
 			
-			// aapt resource value: 0x7F080007
-			public const int Comma = 2131230727;
+			// aapt resource value: 0x7F080008
+			public const int Comma = 2131230728;
 			
 			// aapt resource value: 0x7F08005C
 			public const int container = 2131230812;
@@ -3390,20 +3393,20 @@ namespace Calculator
 			// aapt resource value: 0x7F08005F
 			public const int coordinator = 2131230815;
 			
-			// aapt resource value: 0x7F080008
-			public const int Cos = 2131230728;
-			
 			// aapt resource value: 0x7F080009
-			public const int Ctg = 2131230729;
-			
-			// aapt resource value: 0x7F080005
-			public const int CTRL = 2131230725;
+			public const int Cos = 2131230729;
 			
 			// aapt resource value: 0x7F08000A
-			public const int CursorLeft = 2131230730;
+			public const int Ctg = 2131230730;
+			
+			// aapt resource value: 0x7F080006
+			public const int CTRL = 2131230726;
 			
 			// aapt resource value: 0x7F08000B
-			public const int CursorRight = 2131230731;
+			public const int CursorLeft = 2131230731;
+			
+			// aapt resource value: 0x7F08000C
+			public const int CursorRight = 2131230732;
 			
 			// aapt resource value: 0x7F080060
 			public const int custom = 2131230816;
@@ -3435,14 +3438,14 @@ namespace Calculator
 			// aapt resource value: 0x7F080069
 			public const int disableHome = 2131230825;
 			
-			// aapt resource value: 0x7F08000C
-			public const int Display = 2131230732;
-			
 			// aapt resource value: 0x7F08000D
-			public const int Div = 2131230733;
+			public const int Display = 2131230733;
 			
 			// aapt resource value: 0x7F08000E
-			public const int E = 2131230734;
+			public const int Div = 2131230734;
+			
+			// aapt resource value: 0x7F08000F
+			public const int E = 2131230735;
 			
 			// aapt resource value: 0x7F08006A
 			public const int edit_query = 2131230826;
@@ -3456,8 +3459,8 @@ namespace Calculator
 			// aapt resource value: 0x7F08006D
 			public const int enterAlwaysCollapsed = 2131230829;
 			
-			// aapt resource value: 0x7F08000F
-			public const int Equal = 2131230735;
+			// aapt resource value: 0x7F080010
+			public const int Equal = 2131230736;
 			
 			// aapt resource value: 0x7F08006E
 			public const int exitUntilCollapsed = 2131230830;
@@ -3486,8 +3489,8 @@ namespace Calculator
 			// aapt resource value: 0x7F080076
 			public const int forever = 2131230838;
 			
-			// aapt resource value: 0x7F080010
-			public const int FUNCTION = 2131230736;
+			// aapt resource value: 0x7F080011
+			public const int FUNCTION = 2131230737;
 			
 			// aapt resource value: 0x7F080077
 			public const int ghost_view = 2131230839;
@@ -3533,9 +3536,6 @@ namespace Calculator
 			
 			// aapt resource value: 0x7F080085
 			public const int left = 2131230853;
-			
-			// aapt resource value: 0x7F080011
-			public const int LeftBracket = 2131230737;
 			
 			// aapt resource value: 0x7F080012
 			public const int Lg = 2131230738;
@@ -3708,14 +3708,14 @@ namespace Calculator
 			// aapt resource value: 0x7F0800A9
 			public const int progress_horizontal = 2131230889;
 			
+			// aapt resource value: 0x7F080027
+			public const int Rad = 2131230759;
+			
 			// aapt resource value: 0x7F0800AA
 			public const int radio = 2131230890;
 			
 			// aapt resource value: 0x7F0800AB
 			public const int right = 2131230891;
-			
-			// aapt resource value: 0x7F080027
-			public const int RightBracket = 2131230759;
 			
 			// aapt resource value: 0x7F0800AC
 			public const int right_icon = 2131230892;

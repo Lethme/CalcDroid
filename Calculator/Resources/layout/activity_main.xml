@@ -194,18 +194,18 @@
                 android:id="@+id/E"
             />
             <Button
-                android:text="("
+                android:text="Rad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
-                android:id="@+id/LeftBracket"
+                android:id="@+id/Rad"
             />
             <Button
-                android:text=")"
+                android:text="( )"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
-                android:id="@+id/RightBracket"
+                android:id="@+id/Brackets"
             />
         </LinearLayout>
         <LinearLayout

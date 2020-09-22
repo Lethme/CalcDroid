@@ -3312,6 +3312,9 @@ namespace Calculator
 			// aapt resource value: 0x7F080047
 			public const int bottom = 2131230791;
 			
+			// aapt resource value: 0x7F080004
+			public const int Brackets = 2131230724;
+			
 			// aapt resource value: 0x7F080048
 			public const int browser_actions_header_text = 2131230792;
 			
@@ -3345,8 +3348,8 @@ namespace Calculator
 			// aapt resource value: 0x7F080052
 			public const int chronometer = 2131230802;
 			
-			// aapt resource value: 0x7F080005
-			public const int Clear = 2131230725;
+			// aapt resource value: 0x7F080006
+			public const int Clear = 2131230726;
 			
 			// aapt resource value: 0x7F080053
 			public const int clip_horizontal = 2131230803;
@@ -3357,8 +3360,8 @@ namespace Calculator
 			// aapt resource value: 0x7F080055
 			public const int collapseActionView = 2131230805;
 			
-			// aapt resource value: 0x7F080006
-			public const int Comma = 2131230726;
+			// aapt resource value: 0x7F080007
+			public const int Comma = 2131230727;
 			
 			// aapt resource value: 0x7F080056
 			public const int container = 2131230806;
@@ -3372,20 +3375,20 @@ namespace Calculator
 			// aapt resource value: 0x7F080059
 			public const int coordinator = 2131230809;
 			
-			// aapt resource value: 0x7F080007
-			public const int Cos = 2131230727;
-			
 			// aapt resource value: 0x7F080008
-			public const int Ctg = 2131230728;
-			
-			// aapt resource value: 0x7F080004
-			public const int CTRL = 2131230724;
+			public const int Cos = 2131230728;
 			
 			// aapt resource value: 0x7F080009
-			public const int CursorLeft = 2131230729;
+			public const int Ctg = 2131230729;
+			
+			// aapt resource value: 0x7F080005
+			public const int CTRL = 2131230725;
 			
 			// aapt resource value: 0x7F08000A
-			public const int CursorRight = 2131230730;
+			public const int CursorLeft = 2131230730;
+			
+			// aapt resource value: 0x7F08000B
+			public const int CursorRight = 2131230731;
 			
 			// aapt resource value: 0x7F08005A
 			public const int custom = 2131230810;
@@ -3417,14 +3420,14 @@ namespace Calculator
 			// aapt resource value: 0x7F080063
 			public const int disableHome = 2131230819;
 			
-			// aapt resource value: 0x7F08000B
-			public const int Display = 2131230731;
-			
 			// aapt resource value: 0x7F08000C
-			public const int Div = 2131230732;
+			public const int Display = 2131230732;
 			
 			// aapt resource value: 0x7F08000D
-			public const int E = 2131230733;
+			public const int Div = 2131230733;
+			
+			// aapt resource value: 0x7F08000E
+			public const int E = 2131230734;
 			
 			// aapt resource value: 0x7F080064
 			public const int edit_query = 2131230820;
@@ -3438,8 +3441,8 @@ namespace Calculator
 			// aapt resource value: 0x7F080067
 			public const int enterAlwaysCollapsed = 2131230823;
 			
-			// aapt resource value: 0x7F08000E
-			public const int Equal = 2131230734;
+			// aapt resource value: 0x7F08000F
+			public const int Equal = 2131230735;
 			
 			// aapt resource value: 0x7F080068
 			public const int exitUntilCollapsed = 2131230824;
@@ -3468,8 +3471,8 @@ namespace Calculator
 			// aapt resource value: 0x7F080070
 			public const int forever = 2131230832;
 			
-			// aapt resource value: 0x7F08000F
-			public const int FUNCTION = 2131230735;
+			// aapt resource value: 0x7F080010
+			public const int FUNCTION = 2131230736;
 			
 			// aapt resource value: 0x7F080071
 			public const int ghost_view = 2131230833;
@@ -3512,9 +3515,6 @@ namespace Calculator
 			
 			// aapt resource value: 0x7F08007E
 			public const int left = 2131230846;
-			
-			// aapt resource value: 0x7F080010
-			public const int LeftBracket = 2131230736;
 			
 			// aapt resource value: 0x7F080011
 			public const int Lg = 2131230737;
@@ -3681,14 +3681,14 @@ namespace Calculator
 			// aapt resource value: 0x7F0800A0
 			public const int progress_horizontal = 2131230880;
 			
+			// aapt resource value: 0x7F080026
+			public const int Rad = 2131230758;
+			
 			// aapt resource value: 0x7F0800A1
 			public const int radio = 2131230881;
 			
 			// aapt resource value: 0x7F0800A2
 			public const int right = 2131230882;
-			
-			// aapt resource value: 0x7F080026
-			public const int RightBracket = 2131230758;
 			
 			// aapt resource value: 0x7F0800A3
 			public const int right_icon = 2131230883;

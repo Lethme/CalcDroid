@@ -20,6 +20,7 @@ namespace Calculator
     {
         TextInputLayout Display;
         EditText Text;
+        bool IsEqualPressed = false;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -48,6 +49,7 @@ namespace Calculator
                 {
                     SetText("NaN");
                 }
+                IsEqualPressed = true;
             };
 
             FindViewById<Button>(Resource.Id.Num0).Click += delegate { AddText("0"); };
@@ -83,8 +85,7 @@ namespace Calculator
             FindViewById<Button>(Resource.Id.Abs).Click += delegate { AddText("Abs()", 4); };
             FindViewById<Button>(Resource.Id.Round).Click += delegate { AddText("Round()", 6); };
 
-            FindViewById<Button>(Resource.Id.LeftBracket).Click += delegate { AddText("("); };
-            FindViewById<Button>(Resource.Id.RightBracket).Click += delegate { AddText(")"); };
+            FindViewById<Button>(Resource.Id.Brackets).Click += delegate { AddText("()", 1); };
 
             FindViewById<Button>(Resource.Id.Pi).Click += delegate { AddText("Pi"); };
             FindViewById<Button>(Resource.Id.E).Click += delegate { AddText("E"); };
@@ -92,10 +93,28 @@ namespace Calculator
 
             FindViewById<Button>(Resource.Id.CursorLeft).Click += delegate { CursorLeft(); };
             FindViewById<Button>(Resource.Id.CursorRight).Click += delegate { CursorRight(); };
+
+            FindViewById<Button>(Resource.Id.Rad).Click += delegate
+            {
+                var RadBtn = FindViewById<Button>(Resource.Id.Rad);
+                if (RadBtn.Text == "Rad")
+                {
+                    Expression.Expression.Deg = true;
+                    RadBtn.Text = "Deg";
+                }
+                else if (RadBtn.Text == "Deg")
+                {
+                    Expression.Expression.Deg = false;
+                    RadBtn.Text = "Rad";
+                }
+            };
         }
         public void AddText(string Str, int CursorPosition = 0)
         {
             Display.EditText.RequestFocus();
+
+            if (IsEqualPressed) { Clear(); IsEqualPressed = false; }
+
             var TempCursorPosition = Display.EditText.SelectionStart;
             Display.EditText.Text = Display.EditText.Text.Insert(Display.EditText.SelectionStart, Str);
             if (CursorPosition == 0)
@@ -115,7 +134,9 @@ namespace Calculator
         {
             if (Display.EditText.Text.Length > 0)
             {
+                var TempCursorPosition = Display.EditText.SelectionStart;
                 Display.EditText.Text = Display.EditText.Text.Remove(Display.EditText.Text.Length - 1, 1);
+                if (Display.EditText.Text.Length != 0) Display.EditText.SetSelection(TempCursorPosition - 1);
             }
         }
         public void CursorRight()
