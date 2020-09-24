@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 using Collections;
 
 namespace Expression
@@ -70,7 +71,7 @@ namespace Expression
                 if (Enum.IsDefined(typeof(Enums.ConstantOperators), (int)Operator)) return true;
                 return false;
             }
-            static public byte GetBinaryOperatorPriority(char Operator)
+            static public byte GetOperatorPriority(char Operator)
             {
                 switch (Operator)
                 {
@@ -109,9 +110,7 @@ namespace Expression
                 {
                     while (!Service.IsDelimeter(Expression[i]) && !Service.IsBinaryOperator(Expression[i]))
                     {
-                        RPNExpression += Expression[i];
-                        i++;
-
+                        RPNExpression += Expression[i++];
                         if (i == Expression.Length) break;
                     }
 
@@ -160,14 +159,14 @@ namespace Expression
 
                         while (Operator != (char)Enums.BinaryOperators.LeftBracket)
                         {
-                            RPNExpression += Operator.ToString() + " ";
+                            RPNExpression += Operator + " ";
                             Operator = OperatorStack.Pop();
                         }
                     }
                     else
                     {
                         if (OperatorStack.Count > 0)
-                            if (Service.GetBinaryOperatorPriority(Expression[i]) <= Service.GetBinaryOperatorPriority(OperatorStack.Peek()))
+                            if (Service.GetOperatorPriority(Expression[i]) <= Service.GetOperatorPriority(OperatorStack.Peek()))
                                 RPNExpression += OperatorStack.Pop().ToString() + " ";
 
                         if (Expression[i] == (char)Enums.BinaryOperators.Minus)
@@ -182,7 +181,7 @@ namespace Expression
                         }
                         else
                         {
-                            OperatorStack.Push(char.Parse(Expression[i].ToString()));
+                            OperatorStack.Push(Expression[i]);
                         }
                     }
                 }
@@ -193,7 +192,7 @@ namespace Expression
 
             return RPNExpression;
         }
-        static private double EvaluateRPN(string RPNExpression)
+        static private double EvaluateRPNExpression(string RPNExpression)
         {
             double result = 0;
             Stack<double> Numbers = new Stack<double>();
@@ -206,8 +205,7 @@ namespace Expression
 
                     while (!Service.IsDelimeter(RPNExpression[i]) && !Service.IsBinaryOperator(RPNExpression[i]))
                     {
-                        Number += RPNExpression[i];
-                        i++;
+                        Number += RPNExpression[i++];
                         if (i == RPNExpression.Length) break;
                     }
                     Numbers.Push(double.Parse(Number));
@@ -282,7 +280,7 @@ namespace Expression
         static public double Parse(string Expression)
         {
             string RPNExpression = GetRPNExpression(Expression);
-            double result = EvaluateRPN(RPNExpression);
+            double result = EvaluateRPNExpression(RPNExpression);
             LastExpression = Expression;
             Ans = result;
             return result;

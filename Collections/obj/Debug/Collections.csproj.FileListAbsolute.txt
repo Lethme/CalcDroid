@@ -27,3 +27,9 @@ X:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\obj\Debug\Collections.cs
 X:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\obj\Debug\Collections.csproj.CoreCompileInputs.cache
 X:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\obj\Debug\Collections.dll
 X:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\obj\Debug\Collections.pdb
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\bin\Debug\bin\Collections.dll
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\bin\Debug\bin\Collections.pdb
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\obj\Debug\Collections.csprojAssemblyReference.cache
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\obj\Debug\Collections.csproj.CoreCompileInputs.cache
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\obj\Debug\Collections.dll
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\obj\Debug\Collections.pdb

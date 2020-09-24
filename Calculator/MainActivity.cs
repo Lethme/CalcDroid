@@ -31,14 +31,8 @@ namespace Calculator
 
             Display = (TextInputLayout)FindViewById(Resource.Id.textInputLayout);
             Text = (EditText)FindViewById(Resource.Id.Display);
+            Text.ShowSoftInputOnFocus = false;
             Text.RequestFocus();
-            /*
-            Text.Clickable = false;
-            Text.Focusable = false;
-            Text.FocusableInTouchMode = false;
-            Text.LongClickable = false;
-            Text.SetCursorVisible(false);
-            */
 
             FindViewById<Button>(Resource.Id.Equal).Click += delegate { Result(GetExpression()); };
 
@@ -77,6 +71,7 @@ namespace Calculator
             FindViewById<Button>(Resource.Id.Round).Click += delegate { AddText("Round()", 6); };
             FindViewById<Button>(Resource.Id.Sqrt).Click += delegate { AddText("Sqrt()", 5); };
             FindViewById<Button>(Resource.Id.Sqr).Click += delegate { AddText("Sqr()", 4); };
+            FindViewById<Button>(Resource.Id.Exp).Click += delegate { AddText("Exp()", 4); };
 
             FindViewById<Button>(Resource.Id.Brackets).Click += delegate { AddText("()", 1); };
 
@@ -121,8 +116,11 @@ namespace Calculator
             if (Display.EditText.Text.Length > 0)
             {
                 var TempCursorPosition = Display.EditText.SelectionStart;
-                Display.EditText.Text = Display.EditText.Text.Remove(Display.EditText.Text.Length - 1, 1);
-                if (Display.EditText.Text.Length != 0) Display.EditText.SetSelection(TempCursorPosition - 1);
+                if (TempCursorPosition != 0)
+                {
+                    Display.EditText.Text = Display.EditText.Text.Remove(TempCursorPosition - 1, 1);
+                    if (Display.EditText.Text.Length != 0) Display.EditText.SetSelection(TempCursorPosition - 1);
+                }
             }
         }
         public void CursorRight()

@@ -273,9 +273,7 @@ namespace Collections
             return _items.GetEnumerator();
         }
     }
-    public class BinaryTree
-        : IComparable,
-          IComparable<BinaryTree>
+    public class BinaryTree : IComparable, IComparable<BinaryTree>
     {
         private readonly int _value;
 
