@@ -60,20 +60,20 @@ namespace Calculator
             FindViewById<Button>(Resource.Id.Backspace).Click += delegate { Backspace(); };
             FindViewById<Button>(Resource.Id.Clear).Click += delegate { Clear(); };
 
-            FindViewById<Button>(Resource.Id.Sin).Click += delegate { AddText("Sin()", 4); };
-            FindViewById<Button>(Resource.Id.Cos).Click += delegate { AddText("Cos()", 4); };
-            FindViewById<Button>(Resource.Id.Tan).Click += delegate { AddText("Tan()", 4); };
-            FindViewById<Button>(Resource.Id.Ctg).Click += delegate { AddText("Ctg()", 4); };
-            FindViewById<Button>(Resource.Id.Ln).Click += delegate { AddText("Ln()", 3); };
-            FindViewById<Button>(Resource.Id.Lg).Click += delegate { AddText("Lg()", 3); };
-            FindViewById<Button>(Resource.Id.Log).Click += delegate { AddText("Log()", 4); };
-            FindViewById<Button>(Resource.Id.Pow2).Click += delegate { AddText("Pow2()", 5); };
-            FindViewById<Button>(Resource.Id.Pow10).Click += delegate { AddText("Pow10()", 6); };
-            FindViewById<Button>(Resource.Id.Abs).Click += delegate { AddText("Abs()", 4); };
-            FindViewById<Button>(Resource.Id.Round).Click += delegate { AddText("Round()", 6); };
-            FindViewById<Button>(Resource.Id.Sqrt).Click += delegate { AddText("Sqrt()", 5); };
-            FindViewById<Button>(Resource.Id.Sqr).Click += delegate { AddText("Sqr()", 4); };
-            FindViewById<Button>(Resource.Id.Exp).Click += delegate { AddText("Exp()", 4); };
+            FindViewById<Button>(Resource.Id.Sin).Click += delegate { AddText("sin()", 4); };
+            FindViewById<Button>(Resource.Id.Cos).Click += delegate { AddText("cos()", 4); };
+            FindViewById<Button>(Resource.Id.Tan).Click += delegate { AddText("tan()", 4); };
+            FindViewById<Button>(Resource.Id.Ctg).Click += delegate { AddText("ctg()", 4); };
+            FindViewById<Button>(Resource.Id.Ln).Click += delegate { AddText("ln()", 3); };
+            FindViewById<Button>(Resource.Id.Lg).Click += delegate { AddText("lg()", 3); };
+            FindViewById<Button>(Resource.Id.Log).Click += delegate { AddText("log()", 4); };
+            FindViewById<Button>(Resource.Id.Pow2).Click += delegate { AddText("pow2()", 5); };
+            FindViewById<Button>(Resource.Id.Pow10).Click += delegate { AddText("pow10()", 6); };
+            FindViewById<Button>(Resource.Id.Abs).Click += delegate { AddText("abs()", 4); };
+            FindViewById<Button>(Resource.Id.Round).Click += delegate { AddText("round()", 6); };
+            FindViewById<Button>(Resource.Id.Sqrt).Click += delegate { AddText("sqrt()", 5); };
+            FindViewById<Button>(Resource.Id.Sqr).Click += delegate { AddText("sqr()", 4); };
+            FindViewById<Button>(Resource.Id.Exp).Click += delegate { AddText("exp()", 4); };
 
             FindViewById<Button>(Resource.Id.Brackets).Click += delegate { AddText("()", 1); };
 
@@ -99,7 +99,7 @@ namespace Calculator
             if (IsEqualPressed)
             { 
                 Clear();
-                FindViewById<TextView>(Resource.Id.Answer).Text = "Last answer: " + Expression.Expression.Ans.ToString();
+                FindViewById<TextView>(Resource.Id.Answer).Text = "Last expression result: " + Expression.Expression.Ans.ToString();
                 IsEqualPressed = false;
             }
 
