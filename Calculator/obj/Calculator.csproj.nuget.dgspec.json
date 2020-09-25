@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Calculator\\Calculator.csproj": {}
+    "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Calculator\\Calculator.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Calculator\\Calculator.csproj": {
+    "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Calculator\\Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Calculator\\Calculator.csproj",
+        "projectUniqueName": "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Calculator\\Calculator.csproj",
         "projectName": "Calculator",
-        "projectPath": "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Calculator\\Calculator.csproj",
+        "projectPath": "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Calculator\\Calculator.csproj",
         "packagesPath": "C:\\Users\\Saya\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Calculator\\obj\\",
+        "outputPath": "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Calculator\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "E:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Saya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Expression\\Expression.csproj": {
-                "projectPath": "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Expression\\Expression.csproj"
+              "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Expression\\Expression.csproj": {
+                "projectPath": "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Expression\\Expression.csproj"
               }
             }
           }
@@ -62,26 +62,26 @@
         }
       }
     },
-    "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Collections\\Collections.csproj": {
+    "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Collections\\Collections.csproj": {
       "restore": {
-        "projectUniqueName": "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Collections\\Collections.csproj",
+        "projectUniqueName": "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Collections\\Collections.csproj",
         "projectName": "Collections",
-        "projectPath": "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Collections\\Collections.csproj"
+        "projectPath": "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Collections\\Collections.csproj"
       },
       "frameworks": {
         "net48": {}
       }
     },
-    "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Expression\\Expression.csproj": {
+    "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Expression\\Expression.csproj": {
       "restore": {
-        "projectUniqueName": "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Expression\\Expression.csproj",
+        "projectUniqueName": "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Expression\\Expression.csproj",
         "projectName": "Expression",
-        "projectPath": "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Expression\\Expression.csproj",
+        "projectPath": "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Expression\\Expression.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {
-              "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Collections\\Collections.csproj": {
-                "projectPath": "E:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Collections\\Collections.csproj"
+              "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Collections\\Collections.csproj": {
+                "projectPath": "X:\\Projects\\Visual Studio\\Xamarin\\CalcDroid\\Collections\\Collections.csproj"
               }
             }
           }

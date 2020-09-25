@@ -33,6 +33,8 @@ namespace Calculator
             Text = (EditText)FindViewById(Resource.Id.Display);
             Text.ShowSoftInputOnFocus = false;
             Text.RequestFocus();
+            Text.LongClickable = false;
+            Text.InputType = InputTypes.TextVariationFilter;
 
             FindViewById<Button>(Resource.Id.Equal).Click += delegate { Result(GetExpression()); };
 
@@ -94,7 +96,12 @@ namespace Calculator
         {
             Display.EditText.RequestFocus();
 
-            if (IsEqualPressed) { Clear(); IsEqualPressed = false; }
+            if (IsEqualPressed)
+            { 
+                Clear();
+                FindViewById<TextView>(Resource.Id.Answer).Text = "Last answer: " + Expression.Expression.Ans.ToString();
+                IsEqualPressed = false;
+            }
 
             var TempCursorPosition = Display.EditText.SelectionStart;
             Display.EditText.Text = Display.EditText.Text.Insert(Display.EditText.SelectionStart, Str);

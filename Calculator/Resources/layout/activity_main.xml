@@ -28,6 +28,14 @@
             android:inputType="none"
             android:textIsSelectable="true"
         />
+        <TextView
+            android:text="Here should be your last answer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="7.0dp"
+            android:layout_marginLeft="4.0dp"
+            android:id="@+id/Answer" 
+        />
 	</android.support.design.widget.TextInputLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -46,33 +54,12 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout10">
-            <Button
-                android:text="Exp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight=".2"
-                android:id="@+id/Exp"
-            />
-            <Button
-                android:text="Sqrt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight=".2"
-                android:id="@+id/Sqrt"
-            />
-            <Button
-                android:text="Sqr"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight=".2"
-                android:id="@+id/Sqr"
-            />
+            android:id="@+id/linearLayout9">
             <Button
                 android:text="&#9668;"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".2"
+                android:layout_weight=".5"
                 android:textSize="25sp"
                 android:id="@+id/CursorLeft"
             />
@@ -80,7 +67,7 @@
                 android:text="&#9658;"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".2"
+                android:layout_weight=".5"
                 android:textSize="25sp"
                 android:id="@+id/CursorRight"
             />
@@ -91,7 +78,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout9">
+            android:id="@+id/linearLayout8">
             <Button
                 android:text="2^x"
                 android:layout_width="wrap_content"
@@ -107,54 +94,18 @@
                 android:id="@+id/Pow10"
             />
             <Button
-                android:text="Abs"
+                android:text="Sqrt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
-                android:id="@+id/Abs"
+                android:id="@+id/Sqrt"
             />
             <Button
-                android:text="Round"
+                android:text="Sqr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
-                android:id="@+id/Round"
-            />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/linearLayout8">
-            <Button
-                android:text="Ln"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Ln"
-            />
-            <Button
-                android:text="Lg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Lg"
-            />
-            <Button
-                android:text="Log"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Log"
-            />
-            <Button
-                android:text="Ans"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Ans"
+                android:id="@+id/Sqr"
             />
         </LinearLayout>
         <LinearLayout
@@ -165,32 +116,39 @@
             android:layout_height="wrap_content"
             android:id="@+id/linearLayout7">
             <Button
-                android:text="Sin"
+                android:text="Ln"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Sin"
+                android:layout_weight=".2"
+                android:id="@+id/Ln"
             />
             <Button
-                android:text="Cos"
+                android:text="Lg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Cos"
+                android:layout_weight=".2"
+                android:id="@+id/Lg"
             />
             <Button
-                android:text="Tan"
+                android:text="Log"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Tan"
+                android:layout_weight=".2"
+                android:id="@+id/Log"
             />
             <Button
-                android:text="Ctg"
+                android:text="Abs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Ctg"
+                android:layout_weight=".2"
+                android:id="@+id/Abs"
+            />
+            <Button
+                android:text="Round"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:id="@+id/Round"
             />
         </LinearLayout>
         <LinearLayout
@@ -201,32 +159,39 @@
             android:layout_height="wrap_content"
             android:id="@+id/linearLayout6">
             <Button
-                android:text="Pi"
+                android:text="Sin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Pi"
+                android:layout_weight=".2"
+                android:id="@+id/Sin"
             />
             <Button
-                android:text="E"
+                android:text="Cos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/E"
+                android:layout_weight=".2"
+                android:id="@+id/Cos"
             />
             <Button
-                android:text="Rad"
+                android:text="Tan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/RadDeg"
+                android:layout_weight=".2"
+                android:id="@+id/Tan"
             />
             <Button
-                android:text="( )"
+                android:text="Ctg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Brackets"
+                android:layout_weight=".2"
+                android:id="@+id/Ctg"
+            />
+            <Button
+                android:text="Ans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:id="@+id/Ans"
             />
         </LinearLayout>
         <LinearLayout
@@ -240,29 +205,36 @@
                 android:text="C"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Clear"
             />
             <Button
                 android:text="Back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Backspace"
             />
             <Button
-                android:text="^"
+                android:text="Exp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Pow"
+                android:layout_weight=".2"
+                android:id="@+id/Exp"
             />
             <Button
-                android:text="/"
+                android:text="Rad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Div"
+                android:layout_weight=".2"
+                android:id="@+id/RadDeg"
+            />
+            <Button
+                android:text="( )"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:id="@+id/Brackets"
             />
         </LinearLayout>
         <LinearLayout
@@ -276,29 +248,36 @@
                 android:text="7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Num7"
             />
             <Button
                 android:text="8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Num8"
             />
             <Button
                 android:text="9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Num9"
             />
             <Button
-                android:text="*"
+                android:text="Pi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Mul"
+                android:layout_weight=".2"
+                android:id="@+id/Pi"
+            />
+            <Button
+                android:text="E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:id="@+id/E"
             />
         </LinearLayout>
         <LinearLayout
@@ -312,29 +291,36 @@
                 android:text="4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Num4"
             />
             <Button
                 android:text="5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Num5"
             />
             <Button
                 android:text="6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Num6"
             />
             <Button
-                android:text="-"
+                android:text="^"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Minus"
+                android:layout_weight=".2"
+                android:id="@+id/Pow"
+            />
+            <Button
+                android:text="/"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:id="@+id/Div"
             />
         </LinearLayout>
         <LinearLayout
@@ -348,29 +334,36 @@
                 android:text="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Num1"
             />
             <Button
                 android:text="2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Num2"
             />
             <Button
                 android:text="3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Num3"
             />
             <Button
-                android:text="+"
+                android:text="-"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:id="@+id/Plus"
+                android:layout_weight=".2"
+                android:id="@+id/Minus"
+            />
+            <Button
+                android:text="*"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:id="@+id/Mul"
             />
         </LinearLayout>
         <LinearLayout
@@ -384,29 +377,36 @@
                 android:text="0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Num0"
             />
             <Button
                 android:text=","
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Comma"
             />
             <Button
                 android:text="="
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Equal"
             />
             <Button
                 android:text="%"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".2"
                 android:id="@+id/Mod"
+            />
+            <Button
+                android:text="+"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:id="@+id/Plus"
             />
         </LinearLayout>
     </LinearLayout>
