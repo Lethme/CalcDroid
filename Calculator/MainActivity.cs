@@ -18,9 +18,9 @@ namespace Calculator
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        TextInputLayout Display;
-        EditText Text;
-        bool IsEqualPressed = false;
+        static TextInputLayout Display;
+        static EditText Text;
+        static bool IsEqualPressed = false;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -74,6 +74,7 @@ namespace Calculator
             FindViewById<Button>(Resource.Id.Sqrt).Click += delegate { AddText("sqrt()", 5); };
             FindViewById<Button>(Resource.Id.Sqr).Click += delegate { AddText("sqr()", 4); };
             FindViewById<Button>(Resource.Id.Exp).Click += delegate { AddText("exp()", 4); };
+            FindViewById<Button>(Resource.Id.Fact).Click += delegate { AddText("fact()", 5); };
 
             FindViewById<Button>(Resource.Id.Brackets).Click += delegate { AddText("()", 1); };
 
@@ -89,7 +90,7 @@ namespace Calculator
                 var RadDegBtn = FindViewById<Button>(Resource.Id.RadDeg);
                 if (Expression.Expression.SwitchRadDeg()) { RadDegBtn.Text = "Deg"; }
                 else { RadDegBtn.Text = "Rad"; }
-                if (GetExpression() != String.Empty) Result(GetLastExpression());
+                if (GetExpression() != String.Empty) { IsEqualPressed = false; Result(GetLastExpression()); }
             };
         }
         public void AddText(string Str, int CursorPosition = 0)
@@ -117,9 +118,22 @@ namespace Calculator
         public void Clear()
         {
             Display.EditText.Text = string.Empty;
+
+            if (IsEqualPressed)
+            {
+                FindViewById<TextView>(Resource.Id.Answer).Text = "Last expression result: " + Expression.Expression.Ans.ToString();
+                IsEqualPressed = false;
+            }
         }
         public void Backspace()
         {
+            if (IsEqualPressed)
+            {
+                Clear();
+                FindViewById<TextView>(Resource.Id.Answer).Text = "Last expression result: " + Expression.Expression.Ans.ToString();
+                IsEqualPressed = false;
+            }
+
             if (Display.EditText.Text.Length > 0)
             {
                 var TempCursorPosition = Display.EditText.SelectionStart;
@@ -142,6 +156,8 @@ namespace Calculator
         }
         public void Result(string Expr)
         {
+            if (IsEqualPressed) return;
+
             try
             {
                 SetText(Expression.Expression.Parse(Expr).ToString());

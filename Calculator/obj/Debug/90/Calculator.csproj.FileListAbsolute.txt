@@ -1030,3 +1030,4 @@ X:\Projects\Visual Studio\Xamarin\CalcDroid\Calculator\obj\Debug\90\stamp\_Conve
 X:\Projects\Visual Studio\Xamarin\CalcDroid\Calculator\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 X:\Projects\Visual Studio\Xamarin\CalcDroid\Calculator\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 X:\Projects\Visual Studio\Xamarin\CalcDroid\Calculator\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Calculator\obj\Debug\90\res\drawable\calc.png

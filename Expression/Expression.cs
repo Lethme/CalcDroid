@@ -24,7 +24,8 @@ namespace Expression
                 Pow2 = 'P',
                 Pow10 = 'D',
                 Abs = 'A',
-                Round = 'R'
+                Round = 'R',
+                Fact = 'F'
             }
             public enum ConstantOperators
             {
@@ -51,6 +52,15 @@ namespace Expression
         }
         static private class Service
         {
+            static public int Factorial(int Number)
+            {
+                if (Number < 0) throw new ArgumentException();
+
+                int result = Number;
+                while (Number != 1) result *= --Number;
+
+                return result;
+            }
             static public bool IsDelimeter(char Operator)
             {
                 if (Enum.IsDefined(typeof(Enums.Delimeters), (int)Operator)) return true;
@@ -113,8 +123,7 @@ namespace Expression
                         RPNExpression += Expression[i++];
                         if (i == Expression.Length) break;
                     }
-
-                    RPNExpression += " ";
+                    RPNExpression += ((char)Enums.Delimeters.Space).ToString();
                     i--;
                 }
                 if (Char.IsLetter(Expression[i]))
@@ -143,6 +152,7 @@ namespace Expression
                         case "pow10": { if (Expression[i] != (char)Enums.BinaryOperators.LeftBracket) throw new ArgumentException(); OperatorStack.Push((char)Enums.UnaryOperators.Pow10); break; }
                         case "abs": { if (Expression[i] != (char)Enums.BinaryOperators.LeftBracket) throw new ArgumentException(); OperatorStack.Push((char)Enums.UnaryOperators.Abs); break; }
                         case "round": { if (Expression[i] != (char)Enums.BinaryOperators.LeftBracket) throw new ArgumentException(); OperatorStack.Push((char)Enums.UnaryOperators.Round); break; }
+                        case "fact": { if (Expression[i] != (char)Enums.BinaryOperators.LeftBracket) throw new ArgumentException(); OperatorStack.Push((char)Enums.UnaryOperators.Fact); break; }
                         case "pi": { OperatorStack.Push((char)Enums.ConstantOperators.Pi); break; }
                         case "e": { OperatorStack.Push((char)Enums.ConstantOperators.E); break; }
                         case "ans": { OperatorStack.Push((char)Enums.ConstantOperators.Ans); break; }
@@ -159,7 +169,7 @@ namespace Expression
 
                         while (Operator != (char)Enums.BinaryOperators.LeftBracket)
                         {
-                            RPNExpression += Operator + " ";
+                            RPNExpression += Operator + ((char)Enums.Delimeters.Space).ToString();
                             Operator = OperatorStack.Pop();
                         }
                     }
@@ -167,7 +177,7 @@ namespace Expression
                     {
                         if (OperatorStack.Count > 0)
                             if (Service.GetOperatorPriority(Expression[i]) <= Service.GetOperatorPriority(OperatorStack.Peek()))
-                                RPNExpression += OperatorStack.Pop().ToString() + " ";
+                                RPNExpression += OperatorStack.Pop() + ((char)Enums.Delimeters.Space).ToString();
 
                         if (Expression[i] == (char)Enums.BinaryOperators.Minus)
                         {
@@ -188,7 +198,7 @@ namespace Expression
             }
 
             while (OperatorStack.Count > 0)
-                RPNExpression += OperatorStack.Pop() + " ";
+                RPNExpression += OperatorStack.Pop() + ((char)Enums.Delimeters.Space).ToString();
 
             return RPNExpression;
         }
@@ -237,6 +247,7 @@ namespace Expression
                         case (char)Enums.UnaryOperators.Ln: { if (Operand <= 0) throw new ArgumentException(); result = Math.Log(Operand); break; }
                         case (char)Enums.UnaryOperators.Lg: { if (Operand <= 0) throw new ArgumentException(); result = Math.Log10(Operand); break; }
                         case (char)Enums.UnaryOperators.Log: { if (Operand <= 0) throw new ArgumentException(); result = Math.Log(Operand) / Math.Log(2); break; }
+                        case (char)Enums.UnaryOperators.Fact: { if (Operand - Math.Round(Operand) != 0) throw new ArgumentException(); result = Service.Factorial((int)Operand); break; }
                         case (char)Enums.UnaryOperators.Pow2: { result = Math.Pow(2, Operand); break; }
                         case (char)Enums.UnaryOperators.Pow10: { result = Math.Pow(10, Operand); break; }
                         case (char)Enums.UnaryOperators.Abs: { result = Math.Abs(Operand); break; }

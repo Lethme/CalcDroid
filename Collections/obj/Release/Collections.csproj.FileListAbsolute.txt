@@ -9,3 +9,9 @@ E:\Projects\Visual Studio\C#\Calc\Collections\obj\Release\Collections.csprojAsse
 E:\Projects\Visual Studio\C#\Calc\Collections\obj\Release\Collections.csproj.CoreCompileInputs.cache
 E:\Projects\Visual Studio\C#\Calc\Collections\obj\Release\Collections.dll
 E:\Projects\Visual Studio\C#\Calc\Collections\obj\Release\Collections.pdb
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\bin\Release\bin\Collections.dll
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\bin\Release\bin\Collections.pdb
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\obj\Release\Collections.csprojAssemblyReference.cache
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\obj\Release\Collections.csproj.CoreCompileInputs.cache
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\obj\Release\Collections.dll
+E:\Projects\Visual Studio\Xamarin\CalcDroid\Collections\obj\Release\Collections.pdb
